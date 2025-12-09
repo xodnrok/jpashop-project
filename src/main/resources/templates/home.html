@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{fragments/bodyHeader :: bodyHeader}" />
+
+    <div class="jumbotron">
+        <h1>책 쇼핑</h1>
+        <p class="lead">비회원 기능</p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/members/new">회원 가입</a>
+            <a class="btn btn-lg btn-secondary" href="/login">로그인</a>
+        </p>
+    </div>
+
+    <div class="row">
+        <h3 class="my-4" style="text-align: center;">최근 등록된 도서 📚</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4" th:each="item : ${items}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${item.name}">상품 이름 (예시)</h5>
+                    <p class="card-text" th:text="${item.price} + '원'"></p>
+
+                </div>
+            </div>
+        </div>
+        <div th:if="${#lists.isEmpty(items)}" class="col-12 text-center">
+            <p>최근 동록된 도서가 없습니다.</p>
+        </div>
+    </div>
+
+    <div th:replace="~{fragments/footer :: footer}" />
+
+</div> </body>
+</html>
