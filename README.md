@@ -44,6 +44,8 @@
 
 
 프로젝트의 상세한 설계 과정, 트러블 슈팅 내역, 구현 화면은 아래 보고서에서 확인하실 수 있습니다.
+<img width="565" height="584" alt="image" src="https://github.com/user-attachments/assets/21b818e4-bf20-411c-b75b-e2792c12e78c" />
+
 [Term Project 최종 결과 보고서 (PDF) 다운로드](https://github.com/user-attachments/files/24073468/default.pdf)
 
 
